@@ -9,6 +9,26 @@ from collections import Counter
 COMMON_WORDS = ["flag", "ctf", "the", "this", "that", "you", "cipher", "alphabet"]
 VIGENERE_KEYS = ["key", "flag", "ctf", "crypto", "secret", "password"]
 
+# =====================
+# BANNER
+# =====================
+
+BANNER = r"""
+  ____ ___  _   _ ____   _   _ _____ _____ ____  _   _  ____
+ / ___/ _ \| \ | / ___| | | | |_   _| ____|  _ \| | | |/ ___|
+| |  | | | |  \| \___ \ | | | | | | |  _| | |_) | | | | |
+| |__| |_| | |\  |___) || |_| | | | | |___|  _ <| |_| | |___
+ \____\___/|_| \_|____/  \___/  |_| |_____|_| \_\\___/ \____|
+
+                       Ciphertext
+"""
+
+def print_banner():
+    """
+    Print the ASCII banner for Ciphertext.
+    """
+    print(BANNER)
+
 CAESAR_SCORE_THRESHOLD = 18
 CAESAR_TOP_RESULTS = 3
 
@@ -161,6 +181,8 @@ def analyze(cipher):
 # ENTRY POINT
 # =====================
 
+
 if __name__ == "__main__":
+    print_banner()
     cipher = input("Masukkan ciphertext: ").strip()
     analyze(cipher)
